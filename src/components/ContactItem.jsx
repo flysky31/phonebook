@@ -6,13 +6,13 @@ const ContactItem = ({ item }) => {
 	return (
 		<div className={style.box}>
 			<Row>
-				<Col md="2">
+				<Col xs="auto">
 					<img
 						src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Unknown_person.jpg"
 						alt=""
 					/>
 				</Col>
-				<Col md="10" className={style.text}>
+				<Col xs className={style.text}>
 					<h5>{item.name}</h5>
 					<p>{item.phoneNumber}</p>
 				</Col>

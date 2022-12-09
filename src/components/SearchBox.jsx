@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import style from "./SearchBox.module.css";
 
 const SearchBox = () => {
-	const [keyword, setKeyword] = useState(); //키워드값(입력값)을 인식하게
+	let [keyword, setKeyword] = useState(""); //키워드값(입력값)을 인식하게
 	let dispatch = useDispatch();
 
 	const searchByName = (e) => {
@@ -13,16 +13,16 @@ const SearchBox = () => {
 	};
 
 	return (
-		<form action="" className={style.form} onSubmit={searchByName}>
+		<form className={style.form} onSubmit={searchByName}>
 			<Row>
-				<Col xs md="9">
+				<Col xs>
 					<Form.Control
 						type="text"
 						placeholder="이름을 입력해주세요"
-						onChange={(e) => setKeyword(e.target.value)}
+						onChange={(event) => setKeyword(event.target.value)}
 					/>
 				</Col>
-				<Col xs md="3">
+				<Col xs="auto">
 					<Button variant="primary" type="submit">
 						찾기
 					</Button>

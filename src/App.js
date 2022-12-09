@@ -6,16 +6,18 @@ import ContatcList from "./components/ContatcList";
 
 function App() {
 	return (
-		<div className="App">
+		<div className={styles.app}>
 			<h1>Phone Book</h1>
 
-			<Container>				
-					<Col>
+			<Container>
+				<Row>
+					<Col sm="6">
 						<ContatcForm />
 					</Col>
-					<Col>
+					<Col sm="6">
 						<ContatcList />
-					</Col>				
+					</Col>
+				</Row>
 			</Container>
 		</div>
 	);

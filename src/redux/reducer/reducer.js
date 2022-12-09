@@ -11,12 +11,10 @@ function reducer(state = initialState, action) {
 			});
 			break;
 
-			
 		case "SEARCH_BY_NAME": //케이스 새로 추가
-			state.keyword = payload.keyword
+			state.keyword = payload.keyword;
 			break;
-
-	}	
+	}
 	return { ...state };
 }
 
